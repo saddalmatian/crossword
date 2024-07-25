@@ -1,0 +1,23 @@
+{
+    "nodejs": "What is a JavaScript runtime environment built on Chrome's V8 JavaScript engine that allows developers to run JavaScript on the server?",
+    "expressjs": "What is a popular web application framework for Node.js, used for building APIs and web applications?",
+    "restapi": "What architectural style uses HTTP methods (GET, POST, PUT, DELETE) to interact with resources and is commonly used for building web services?",
+    "routing": "How are different HTTP requests mapped to specific handler functions in a backend application?",
+    "middleware": "What are functions that execute during the request-response cycle in an application, commonly used for tasks like logging, authentication, and authorization?",
+    "databases": "What are used for storing and retrieving data persistently in backend applications? (e.g., MongoDB, PostgreSQL, MySQL)",
+    "sql": "What is a structured query language used to interact with relational databases?",
+    "nosql": "What type of database provides a mechanism for storing and retrieving data that is modeled in means other than the tabular relations used in relational databases? (e.g., document, key-value, graph)",
+    "orm": "What tool simplifies database interactions by providing an object-oriented interface to interact with a relational database?",
+    "authentication": "What is the process of verifying the identity of a user or service making a request?",
+    "authorization": "What is the process of determining what actions a user or service is permitted to perform after successful authentication?",
+    "jsonwebtoken": "What is a standard for securely transmitting information between parties as a JSON object?",
+    "security": "What measures should be taken to protect backend applications from common web vulnerabilities? (e.g., input validation, protection against SQL injection, cross-site scripting prevention)",
+    "caching": "What technique improves application performance by storing frequently accessed data in a temporary storage area?",
+    "logging": "What is essential for debugging, monitoring, and auditing backend applications by recording events and errors?",
+    "testing": "How do you ensure the quality and reliability of backend code? (e.g., unit testing, integration testing, end-to-end testing)",
+    "deployment": "What is the process of making a backend application accessible to users? (e.g., deploying to cloud platforms, using containers)",
+    "scalability": "How can backend applications be designed to handle increasing amounts of traffic and data?",
+    "websockets": "What communication protocol provides full-duplex communication channels over a single TCP connection, enabling real-time data exchange?",
+    "graphql": "What is a query language and runtime for APIs that allows clients to request exactly the data they need?",
+    "serverless": "What computing model allows you to run backend code without provisioning or managing servers?"
+}
