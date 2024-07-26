@@ -48,7 +48,8 @@ func (cs *CrosswordService) GenerateCrossword(words []*Word) (*GridResponse, *Gr
 	wg.Wait()
 
 	// 4. Reduce grid size
-	newGrid := grid.ReduceGridSize()
+	newGrid, offsetX, offsetY := grid.ReduceGridSize()
+	UpdateWordPositions(placedWords, offsetX, offsetY)
 
 	// 5. Mask the grid
 	maskedGrid := newGrid.MaskGrid()

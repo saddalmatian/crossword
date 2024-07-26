@@ -1,0 +1,9 @@
+{
+  "python": "What programming language is known for its readability and ease of use?",
+  "interpreter": "What component of Python executes code line by line?",
+  "list": "What data structure is used to store ordered collections of items in Python?",
+  "tuple": "What is a immutable, ordered collection of items in Python?",
+  "dictionary": "What data structure is used to store key-value pairs in Python?",
+  "indentation": "How is the block of code organized in Python instead of braces or keywords?",
+  "function": "What is a reusable block of code that performs a specific task in Python?"
+}

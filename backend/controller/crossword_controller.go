@@ -31,7 +31,8 @@ func (ctrl *CrosswordController) GenerateCrossword(c echo.Context) error {
 
 	// 3. Delegate crossword generation to the service
 	maskedGrid, grid := crosswordService.GenerateCrossword(words)
-
+	fmt.Println("--------------------------")
+	grid.Print()
 	// 4. Store grid in repo
 	ctrl.repo.SetGrid(grid)
 

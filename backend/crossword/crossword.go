@@ -44,7 +44,7 @@ type Position struct {
 type Word struct {
 	Word       string    `json:"-"`         // The answer word
 	Position   Position  `json:"-"`         // Starting position (to be filled later)
-	WordLength int       `json:"-"`         // Length of the word
+	WordLength int       `json:"length"`    // Length of the word
 	Clue       string    `json:"clue"`      // The question for the crossword puzzle
 	Direction  Direction `json:"direction"` // Direction (to be filled later)
 	Number     int       `json:"number"`    // Question number (add this field)
@@ -114,7 +114,7 @@ func NewGrid(limitX, limitY int) *Grid {
 }
 
 // ReduceGridSize reduces the size of the crossword grid to fit the actual content.
-func (g *Grid) ReduceGridSize() *Grid {
+func (g *Grid) ReduceGridSize() (*Grid, int, int) {
 	minX, minY, maxX, maxY := g.findGridBounds()
 	newGridHeight := maxX - minX + 1
 	newGridWidth := maxY - minY + 1
@@ -126,7 +126,7 @@ func (g *Grid) ReduceGridSize() *Grid {
 		}
 	}
 
-	return newGrid
+	return newGrid, minX, minY
 }
 
 func (g *Grid) Grid() [][]rune {
@@ -324,4 +324,11 @@ func (g *Grid) MaskGrid() [][]rune {
 		}
 	}
 	return maskedGrid
+}
+
+func UpdateWordPositions(words []*Word, offsetX, offsetY int) {
+	for i := range words {
+		words[i].StartX -= offsetX
+		words[i].StartY -= offsetY
+	}
 }
