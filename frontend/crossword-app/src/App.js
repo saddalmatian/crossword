@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post('http://localhost:8000/generate?category=javascript');
+        const response = await axios.post('http://localhost:8000/generate?category=backend');
         setCrosswordData(response.data);
       } catch (err) {
         console.error("Error fetching crossword data:", err);
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Python Crossword Puzzle</h1>
+      <h1>Crossword Puzzle</h1>
       <CrosswordGrid
         gridData={{
           grid_x_dim: crosswordData.grid_y_dim,
